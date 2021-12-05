@@ -32,11 +32,13 @@ add_filter( 'pt-ocdi/import_files', 'marian_import_files' );
 function marian_after_import_setup() {
 	// Assign menus to their locations.
 	$main_menu    = get_term_by( 'name', 'Main Menu', 'nav_menu' );
-	$important_links = get_term_by( 'name', 'Important Links', 'nav_menu' );
+	$quick_links = get_term_by( 'name', 'Quick Links', 'nav_menu' );
+	$reservations = get_term_by( 'name', 'Reservations', 'nav_menu' );
 
 	set_theme_mod( 'nav_menu_locations', array(
 			'primary-menu' => $main_menu->term_id,
-			'important-links' => $important_links->term_id,
+			'quick-links' => $quick_links->term_id,
+			'reservations' => $reservations->term_id,
 		)
 	);
 
