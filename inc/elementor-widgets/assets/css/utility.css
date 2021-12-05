@@ -1,0 +1,39 @@
+/* -------------------------
+:: utility Class
+---------------------------- */
+.marian-pt-100 {
+    padding-top: 100px;
+}
+.marian-pt-80 {
+    padding-top: 80px;
+}
+.marian-pt-70 {
+    padding-top: 70px;
+}
+.marian-pt-60 {
+    padding-top: 60px;
+}
+.marian-pt-50 {
+    padding-top: 50px;
+}
+.marian-pt-30 {
+    padding-top: 30px;
+}
+.marian-pb-100 {
+    padding-bottom: 100px;
+}
+.marian-pb-80 {
+    padding-bottom: 80px;
+}
+.marian-pb-70 {
+    padding-bottom: 70px;
+}
+.marian-pb-60 {
+    padding-bottom: 60px;
+}
+.marian-pb-50 {
+    padding-bottom: 50px;
+}
+.marian-pb-30 {
+    padding-bottom: 30px;
+}
