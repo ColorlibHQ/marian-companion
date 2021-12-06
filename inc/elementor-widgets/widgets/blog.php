@@ -111,7 +111,7 @@ class Marian_Blog extends Widget_Base {
                 'label'     => __( 'Section Title Color', 'marian-companion' ),
                 'type'      => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .our_latest_news_area .section_title h3' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .font-back-tittle .archivment-front h3' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -120,10 +120,9 @@ class Marian_Blog extends Widget_Base {
                 'label'     => __( 'Highlighted Color', 'marian-companion' ),
                 'type'      => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .our_latest_news_area .single_news .news_info .date' => 'background: {{VALUE}};',
-                    '{{WRAPPER}} .our_latest_news_area .single_news .news_info .news_meta h3 a:hover' => 'color: {{VALUE}};',
-                    '{{WRAPPER}} .our_latest_news_area .single_news .news_info .news_meta h3:hover' => 'color: {{VALUE}};',
-                    '{{WRAPPER}} .our_latest_news_area .single_news .news_info .news_meta a.read_more:hover' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .blog-area .single-blog .blog-caption .blog-cap-top span' => 'background: {{VALUE}};',
+                    '{{WRAPPER}} .blog-area .single-blog .blog-caption .blog-cap-top ul li a' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .blog-area .single-blog .blog-caption .blog-cap-mid p a:hover' => 'color: {{VALUE}};',
                 ],
             ]
         );

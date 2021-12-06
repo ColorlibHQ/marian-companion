@@ -384,8 +384,6 @@ if ( !class_exists( 'Marian_El_Widgets' ) ) {
             require_once MARIAN_COMPANION_EW_DIR_PATH . 'widgets/testimonial.php';
             require_once MARIAN_COMPANION_EW_DIR_PATH . 'widgets/blog.php';
             require_once MARIAN_COMPANION_EW_DIR_PATH . 'widgets/gallery.php';
-            // require_once MARIAN_COMPANION_EW_DIR_PATH . 'widgets/certificates.php';
-            // require_once MARIAN_COMPANION_EW_DIR_PATH . 'widgets/quotation.php';
             require_once MARIAN_COMPANION_EW_DIR_PATH . 'widgets/contact.php';
         }
 
@@ -411,8 +409,6 @@ if ( !class_exists( 'Marian_El_Widgets' ) ) {
             \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Marianelementor\Widgets\Marian_Testimonial() );
             \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Marianelementor\Widgets\Marian_Blog() );
             \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Marianelementor\Widgets\Marian_Gallery() );
-            // \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Marianelementor\Widgets\Marian_Certificates() );
-            // \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Marianelementor\Widgets\Marian_Quotation_Section() );
             \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Marianelementor\Widgets\Marian_Contact() ); 
         }
 

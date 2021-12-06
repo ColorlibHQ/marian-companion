@@ -35,7 +35,7 @@ class Marian_Testimonial extends Widget_Base {
 	}
 
 	public function get_icon() {
-		return 'eicon-slider-full-screen';
+		return 'eicon-testimonial-carousel';
 	}
 
 	public function get_categories() {
@@ -155,11 +155,20 @@ class Marian_Testimonial extends Widget_Base {
 			]
 		);
 		$this->add_control(
-			'quotation_col', [
-				'label' => __( 'Double Quotation Color', 'marian-companion' ),
+			'btn_col', [
+				'label' => __( 'Navigation Button Color', 'marian-companion' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .testimonial_area .single_testmonial .author_thumb::before' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .h1-testimonial-active:hover button' => 'background: {{VALUE}};',
+				],
+			]
+		);
+		$this->add_control(
+			'stars_col', [
+				'label' => __( 'Stars Color', 'marian-companion' ),
+				'type' => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .testimonial-area .testimonial-ratting i' => 'color: {{VALUE}};',
 				],
 			]
 		);

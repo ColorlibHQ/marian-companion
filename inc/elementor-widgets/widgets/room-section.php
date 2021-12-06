@@ -30,11 +30,11 @@ class Marian_Room_Section extends Widget_Base {
 	}
 
 	public function get_title() {
-		return __( 'Room Section', 'marian-companion' );
+		return __( 'Features Section', 'marian-companion' );
 	}
 
 	public function get_icon() {
-		return 'eicon-column';
+		return 'eicon-posts-group';
 	}
 
 	public function get_categories() {
@@ -184,18 +184,35 @@ class Marian_Room_Section extends Widget_Base {
                 'label' => __( 'Title Color', 'marian-companion' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .about_info .section_title h3' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .dining-area .dining-caption span' => 'color: {{VALUE}};',
                 ],
             ]
         );
         $this->add_control(
-            'highlighted_col', [
-                'label' => __( 'Highlighted Color', 'marian-companion' ),
+            'big_title_col', [
+                'label' => __( 'Big Color', 'marian-companion' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .about_info .section_title h3 span' => 'color: {{VALUE}};',
-                    '{{WRAPPER}} .about_area .about_info .info_inner ul li::before' => 'color: {{VALUE}};',
-                    '{{WRAPPER}} .about_area .about_info .info_inner .customer_info .single_info > span' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .dining-area .dining-caption h3' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+        $this->add_control(
+            'btn_col', [
+                'label' => __( 'Button Color', 'marian-companion' ),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .dining-area .dining-caption .border-btn' => 'color: {{VALUE}}; border-color: {{VALUE}};',
+                    '{{WRAPPER}} .dining-area .dining-caption .border-btn:hover' => 'background: {{VALUE}}; border-color: transparent; color: #fff;',
+                ],
+            ]
+        );
+        $this->add_control(
+            'btn_hov_col', [
+                'label' => __( 'Button Hover Color', 'marian-companion' ),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .dining-area .dining-caption .border-btn:hover' => 'background: {{VALUE}}; border-color: transparent; color: #fff;',
                 ],
             ]
         );

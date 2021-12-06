@@ -35,7 +35,7 @@ class Marian_Booking_Form extends Widget_Base {
 	}
 
 	public function get_icon() {
-		return 'eicon-slider-full-screen';
+		return 'eicon-click';
 	}
 
 	public function get_categories() {
@@ -84,20 +84,22 @@ class Marian_Booking_Form extends Widget_Base {
 			]
 		);
 		$this->add_control(
-            'title_col', [
-                'label' => __( 'Title Color', 'marian-companion' ),
+            'heighlight_col', [
+                'label' => __( 'Heighlighted Color', 'marian-companion' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .property_certificates .section_title h3' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .booking-area .gj-textbox-md, .booking-area .nice-select, .booking-area .booking-wrap .nice-select.open .list, .booking-area .nice-select .option.focus, .booking-area .nice-select .option.selected.focus' => 'border-color: {{VALUE}};',
+                    '{{WRAPPER}} .single-select-box a.btn.select-btn' => 'background: {{VALUE}};',
                 ],
             ]
         );
         $this->add_control(
-            'highlighted_col', [
-                'label' => __( 'Highlighted Color', 'marian-companion' ),
+            'highlighted_hov_col', [
+                'label' => __( 'Highlighted Hover Color', 'marian-companion' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .property_certificates .section_title h3 span' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .booking-area .nice-select .option:hover, .booking-area .nice-select .option.focus, .booking-area .nice-select .option.selected.focus, .single-select-box a.btn:hover' => 'background: {{VALUE}};',
+                    '{{WRAPPER}} .single-select-box a.btn.select-btn:hover' => 'background: {{VALUE}};',
                 ],
             ]
         );

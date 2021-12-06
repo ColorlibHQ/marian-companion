@@ -35,7 +35,7 @@ class Marian_Apartments extends Widget_Base {
 	}
 
 	public function get_icon() {
-		return 'eicon-slider-full-screen';
+		return 'eicon-apps';
 	}
 
 	public function get_categories() {
@@ -158,6 +158,47 @@ class Marian_Apartments extends Widget_Base {
         );
         $this->end_controls_section(); // End Hero content
 
+        //------------------------------ Style title ------------------------------
+        
+        // Top Section Styles
+        $this->start_controls_section(
+            'apartment_sec_style', [
+                'label' => __( 'Apartments Section Styles', 'marian-companion' ),
+                'tab' => Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+        $this->add_control(
+            'title_col', [
+                'label' => __( 'Title Color', 'marian-companion' ),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .room-area .font-back-tittle .archivment-front h3' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'btn_col', [
+                'label' => __( 'Button Color', 'marian-companion' ),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .room-area .room-btn .btn' => 'background: {{VALUE}};',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'btn_hov_col', [
+                'label' => __( 'Button Hover Color', 'marian-companion' ),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .room-area .room-btn .btn:hover' => 'background: {{VALUE}};',
+                ],
+            ]
+        );
+
+        $this->end_controls_section();
 	}
     
 	protected function render() {

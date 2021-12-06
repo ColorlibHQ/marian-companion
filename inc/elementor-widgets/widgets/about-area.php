@@ -162,22 +162,38 @@ class Marian_About_Section extends Widget_Base {
         );
 
         $this->add_control(
-            'title_col', [
-                'label' => __( 'Title Color', 'marian-companion' ),
+            'sub_title_col', [
+                'label' => __( 'Sub Title Color', 'marian-companion' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .about_info .section_title h3' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .customer-caption span' => 'color: {{VALUE}};',
                 ],
             ]
         );
         $this->add_control(
-            'highlighted_col', [
-                'label' => __( 'Highlighted Color', 'marian-companion' ),
+            'title_col', [
+                'label' => __( 'Big & Semi Sub Title Color', 'marian-companion' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .about_info .section_title h3 span' => 'color: {{VALUE}};',
-                    '{{WRAPPER}} .about_area .about_info .info_inner ul li::before' => 'color: {{VALUE}};',
-                    '{{WRAPPER}} .about_area .about_info .info_inner .customer_info .single_info > span' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .customer-caption h2, .customer-caption .caption-details .pera-dtails' => 'color: {{VALUE}} !important;',
+                ],
+            ]
+        );
+        $this->add_control(
+            'btn_col', [
+                'label' => __( 'Button Color', 'marian-companion' ),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .customer-caption .caption-details .btn' => 'background: {{VALUE}};',
+                ],
+            ]
+        );
+        $this->add_control(
+            'btn_hov_col', [
+                'label' => __( 'Button Hover Color', 'marian-companion' ),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .customer-caption .caption-details .btn:hover' => 'background: {{VALUE}};',
                 ],
             ]
         );
